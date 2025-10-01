@@ -1,114 +1,153 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Descubra os melhores cookies artesanais na Sra. Cookies. Sabores incríveis como Chocolate, Gianduia, Kinder e muito mais. Faça seu pedido online!">
-  <meta name="keywords" content="cookies, cookies artesanais, loja de cookies, comprar cookies online, Sra. Cookies">
-  <title>Loja de Cookies</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍪</text></svg>">
-  <link rel="stylesheet" href="estilo.css">
-  <script src="script.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Descubra os melhores cookies artesanais na Sra. Cookies. Sabores incríveis como Chocolate, Gianduia, Kinder e muito mais. Faça seu pedido online!"
+    />
+    <meta
+      name="keywords"
+      content="cookies, cookies artesanais, loja de cookies, comprar cookies online, Sra. Cookies"
+    />
+    <title>Loja de Cookies</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍪</text></svg>"
+    />
+    <link rel="stylesheet" href="estilo.css" />
+    <script src="script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container-header">
+        <button
+          type="button"
+          class="hamburger"
+          id="hamburger-btn"
+          aria-label="Abrir menu de navegação"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
 
-  <header>
-  <div class="container-header">
-    <button type="button" class="hamburger" id="hamburger-btn" aria-label="Abrir menu de navegação">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
+        <h1>🍪 Sra. Cookies 🍪</h1>
 
-    <h1>🍪 Sra. Cookies 🍪</h1>
+        <nav id="nav-menu">
+          <a href="index.html" id="menu1">Cookies</a>
+          <a href="bebidas.html" id="menu2">Bebidas</a>
+          <a href="contato.html" id="menu3">Contato</a>
+        </nav>
 
-    <nav id="nav-menu">
-      <a href="index.html" id="menu1">Cookies</a>
-      <a href="bebidas.html" id="menu2">Bebidas</a>
-      <a href="contato.html" id="menu3">Contato</a>
-    </nav>
+        <div class="carrinho-topo" id="abrirCarrinho">
+          🛒
+          <span id="contador-carrinho">0</span>
+        </div>
+      </div>
+    </header>
 
-    <div class="carrinho-topo" id="abrirCarrinho">
-      🛒
-      <span id="contador-carrinho">0</span>
-    </div>
-  </div>
-</header>
+    <section class="produtos">
+      <h2>Nossos Cookies</h2>
 
-  <section class="produtos">
-    <h2>Nossos Cookies</h2>
+      <div class="card">
+        <img
+          src="https://framerusercontent.com/images/0kcCVbUBv7i3f7ChvpYYnmpeyw.webp?scale-down-to=1024&width=1694&height=1709"
+          alt="Cookie de Chocolate"
+        />
+        <h3>Cookie de Chocolate</h3>
+        <p>Cookie com MUUUITAS gotas de chocolate.</p>
+        <span>R$ 15,90</span>
+        <button>Comprar</button>
+      </div>
 
-    <div class="card">
-      <img src="https://framerusercontent.com/images/0kcCVbUBv7i3f7ChvpYYnmpeyw.webp?scale-down-to=1024&width=1694&height=1709" alt="Cookie de Chocolate">
-      <h3>Cookie de Chocolate</h3>
-      <p>Cookie com MUUUITAS gotas de chocolate.</p>
-      <span>R$ 15,90</span>
-      <button>Comprar</button>
-    </div>
+      <div class="card">
+        <img
+          src="https://framerusercontent.com/images/6R9cbnXEpConkLZ8vS6os7v2cA.webp?scale-down-to=1024&width=1694&height=1709"
+          alt="Cookie de Gianduia"
+        />
+        <h3>Cookie de Gianduia</h3>
+        <p>Cookie recheado de MUUUUUUITA avelã Italiana</p>
+        <span>R$ 19,90</span>
+        <button>Comprar</button>
+      </div>
 
-    <div class="card">
-      <img src="https://framerusercontent.com/images/6R9cbnXEpConkLZ8vS6os7v2cA.webp?scale-down-to=1024&width=1694&height=1709" alt="Cookie de Gianduia">
-      <h3>Cookie de Gianduia</h3>
-      <p>Cookie recheado de MUUUUUUITA avelã Italiana</p>
-      <span>R$ 19,90</span>
-      <button>Comprar</button>
-    </div>
+      <div class="card">
+        <img
+          src="https://framerusercontent.com/images/I6pkbYl9qCSvy0FXFrZoGkK0yeY.png?width=425&height=391"
+          alt="Cookie Alpino Black"
+        />
+        <h3>Cookie Alpino Black</h3>
+        <p>Uma explosão de sabor 3 tipos de chocolate.</p>
+        <span>R$ 15,90</span>
+        <button>Comprar</button>
+      </div>
 
-    <div class="card">
-      <img src="https://framerusercontent.com/images/I6pkbYl9qCSvy0FXFrZoGkK0yeY.png?width=425&height=391" alt="Cookie Alpino Black">
-      <h3>Cookie Alpino Black </h3>
-      <p>Uma explosão de sabor 3 tipos de chocolate.</p>
-      <span>R$ 15,90</span>
-      <button>Comprar</button>
-    </div>
-
-    <div class="card">
-        <img src="https://framerusercontent.com/images/qq8gQGdKRVCgUyATQeNkUjtvIww.png?scale-down-to=1024&width=1330&height=1000" alt="Cookie de KitKat">
+      <div class="card">
+        <img
+          src="https://framerusercontent.com/images/qq8gQGdKRVCgUyATQeNkUjtvIww.png?scale-down-to=1024&width=1330&height=1000"
+          alt="Cookie de KitKat"
+        />
         <h3>Cookie de KitKat</h3>
         <p>Cooike recheado com MUUUUITO KitKat</p>
         <span>R$ 15,90</span>
         <button>Comprar</button>
-    </div>
+      </div>
 
-    <div class="card">
-        <img src="https://framerusercontent.com/images/TGaYIYbt629PcGNNGgvQ6dUGZ0M.webp?width=244&height=163" alt="Cookie de Kinder Bueno">
+      <div class="card">
+        <img
+          src="https://framerusercontent.com/images/TGaYIYbt629PcGNNGgvQ6dUGZ0M.webp?width=244&height=163"
+          alt="Cookie de Kinder Bueno"
+        />
         <h3>Cookie de Kinder</h3>
         <p>Cookie com MUUUITO recheio de Kinder</p>
         <span>R$ 22,90</span>
         <button>Comprar</button>
-    </div>
+      </div>
 
-    <div class="card">
-        <img src="https://framerusercontent.com/images/ho7Bi0VGf8gm2d48aSZBZjwfdoI.png?scale-down-to=512&width=1080&height=1080" alt="Cookie de New York Nuts">
+      <div class="card">
+        <img
+          src="https://framerusercontent.com/images/ho7Bi0VGf8gm2d48aSZBZjwfdoI.png?scale-down-to=512&width=1080&height=1080"
+          alt="Cookie de New York Nuts"
+        />
         <h3>Cookie de New York</h3>
         <p>Cookie com MUUITO recheio de chocolate</p>
         <span>R$ 19,90</span>
         <button>Comprar</button>
-    </div>
+      </div>
 
-    <div class="painel-carrinho">
-  <h2>Seu Carrinho</h2>
-  <ul id="lista-carrinho"></ul>
-  <p id="total">Total: R$ 0,00</p>
-  <button id="finalizar">Finalizar Pedido</button>
-</div>
+      <div class="painel-carrinho">
+        <h2>Seu Carrinho</h2>
+        <ul id="lista-carrinho"></ul>
+        <p id="total">Total: R$ 0,00</p>
+        <button id="finalizar">Finalizar Pedido</button>
+      </div>
+    </section>
 
-
-
-  </section>
-
-  <footer>
-  <div class="social-icons">
-    <a href="#" aria-label="Link para o Instagram"><i class="fab fa-instagram"></i></a>
-    <a href="#" aria-label="Link para o Facebook"><i class="fab fa-facebook-f"></i></a>
-    <a href="#" aria-label="Link para o WhatsApp"><i class="fab fa-whatsapp"></i></a>
-  </div>
-  <p>&copy; 2025 Cookie Store. Todos os direitos reservados.</p>
-</footer>
-
-</body>
+    <footer>
+      <div class="social-icons">
+        <a href="#" aria-label="Link para o Instagram"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="#" aria-label="Link para o Facebook"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a href="#" aria-label="Link para o WhatsApp"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+      </div>
+      <p>&copy; 2025 Cookie Store. Todos os direitos reservados.</p>
+    </footer>
+  </body>
 </html>

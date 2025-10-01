@@ -1,79 +1,124 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Entre em contato com a Sra. Cookies. Faça encomendas personalizadas, tire suas dúvidas ou envie sugestões. Fale conosco por formulário, WhatsApp ou e-mail.">
-  <meta name="keywords" content="contato, encomenda, telefone, endereço, Sra. Cookies, falar com">
-  <title>Contato - Sra. Cookies</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍪</text></svg>">
-  <link rel="stylesheet" href="estilo.css">
-  <script src="script.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Entre em contato com a Sra. Cookies. Faça encomendas personalizadas, tire suas dúvidas ou envie sugestões. Fale conosco por formulário, WhatsApp ou e-mail."
+    />
+    <meta
+      name="keywords"
+      content="contato, encomenda, telefone, endereço, Sra. Cookies, falar com"
+    />
+    <title>Contato - Sra. Cookies</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍪</text></svg>"
+    />
+    <link rel="stylesheet" href="estilo.css" />
+    <script src="script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
+    <header>
+      <div class="container-header">
+        <button
+          type="button"
+          class="hamburger"
+          id="hamburger-btn"
+          aria-label="Abrir menu de navegação"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
 
-<header>
-  <div class="container-header">
-    <button type="button" class="hamburger" id="hamburger-btn" aria-label="Abrir menu de navegação">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
+        <h1>🍪 Sra. Cookies 📞</h1>
 
-    <h1>🍪 Sra. Cookies 📞</h1>
+        <nav id="nav-menu">
+          <a href="index.html" id="menu1">Cookies</a>
+          <a href="bebidas.html" id="menu2">Bebidas</a>
+          <a href="contato.html" id="menu3">Contato</a>
+        </nav>
 
-    <nav id="nav-menu">
-      <a href="index.html" id="menu1">Cookies</a>
-      <a href="bebidas.html" id="menu2">Bebidas</a>
-      <a href="contato.html" id="menu3">Contato</a>
-    </nav>
+        <div class="carrinho-topo" id="abrirCarrinho">
+          🛒
+          <span id="contador-carrinho">0</span>
+        </div>
+      </div>
+    </header>
 
-    <div class="carrinho-topo" id="abrirCarrinho">
-      🛒
-      <span id="contador-carrinho">0</span>
+    <section class="contato">
+      <h2>Fale com a gente!</h2>
+      <p>
+        Tem dúvidas, sugestões ou quer fazer uma encomenda personalizada?
+        Preencha o formulário abaixo ou nos mande uma mensagem pelo WhatsApp!
+      </p>
+      <p></p>
+
+      <form action="#" method="POST" class="form-contato">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+        <button type="submit">Enviar Mensagem</button>
+      </form>
+
+      <div class="info-contato">
+        <h3>📞 Informações de Contato</h3>
+        <p>
+          WhatsApp:
+          <a
+            href="https://wa.me/5540028922"
+            target="_blank"
+            rel="noopener noreferrer"
+            >(99) 940028922</a
+          >
+        </p>
+        <p>
+          Email:
+          <a href="mailto:contato@sracookies.com">contato@sracookies.com</a>
+        </p>
+        <p>Endereço: Rua dos Cookies, 123 - CookieTown</p>
+      </div>
+    </section>
+
+    <div class="painel-carrinho">
+      <h2>Seu Carrinho</h2>
+      <ul id="lista-carrinho"></ul>
+      <p id="total">Total: R$ 0,00</p>
+      <button type="button" id="finalizar">Finalizar Pedido</button>
     </div>
-  </div>
-</header>
 
-  <section class="contato">
-    <h2>Fale com a gente!</h2>
-    <p>Tem dúvidas, sugestões ou quer fazer uma encomenda personalizada? Preencha o formulário abaixo ou nos mande uma mensagem pelo WhatsApp!</p>
-    <p> </p>
-
-    <form action="#" method="POST" class="form-contato">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required>
-
-      <label for="email">E-mail:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="mensagem">Mensagem:</label>
-      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-
-      <button type="submit">Enviar Mensagem</button>
-    </form>
-
-    <div class="info-contato">
-      <h3>📞 Informações de Contato</h3>
-      <p>WhatsApp: <a href="https://wa.me/5540028922" target="_blank" rel="noopener noreferrer">(99) 940028922</a></p>
-      <p>Email: <a href="mailto:contato@sracookies.com">contato@sracookies.com</a></p>
-      <p>Endereço: Rua dos Cookies, 123 - CookieTown</p>
-    </div>
-  </section>
-
-  <footer>
-  <div class="social-icons">
-    <a href="#" aria-label="Link para o Instagram"><i class="fab fa-instagram"></i></a>
-    <a href="#" aria-label="Link para o Facebook"><i class="fab fa-facebook-f"></i></a>
-    <a href="#" aria-label="Link para o WhatsApp"><i class="fab fa-whatsapp"></i></a>
-  </div>
-  <p>&copy; 2025 Cookie Store. Todos os direitos reservados.</p>
-</footer>
-
-</body>
+    <footer>
+      <div class="social-icons">
+        <a href="#" aria-label="Link para o Instagram"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="#" aria-label="Link para o Facebook"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a href="#" aria-label="Link para o WhatsApp"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+      </div>
+      <p>&copy; 2025 Cookie Store. Todos os direitos reservados.</p>
+    </footer>
+  </body>
 </html>

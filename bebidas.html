@@ -1,88 +1,125 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Refresque seu dia com as bebidas especiais da Sra. Cookies. Experimente nosso Cappuccino, Fluffy de morango e o delicioso Ice Pistache.">
-  <meta name="keywords" content="bebidas, cappuccino, milkshake, ice pistache, fluffy, bebidas geladas">
-  <title>Loja de Cookies</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍪</text></svg>">
-  <link rel="stylesheet" href="estilo.css">
-  <script src="script.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Refresque seu dia com as bebidas especiais da Sra. Cookies. Experimente nosso Cappuccino, Fluffy de morango e o delicioso Ice Pistache."
+    />
+    <meta
+      name="keywords"
+      content="bebidas, cappuccino, milkshake, ice pistache, fluffy, bebidas geladas"
+    />
+    <title>Loja de Cookies</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍪</text></svg>"
+    />
+    <link rel="stylesheet" href="estilo.css" />
+    <script src="script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container-header">
+        <button
+          type="button"
+          class="hamburger"
+          id="hamburger-btn"
+          aria-label="Abrir menu de navegação"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
 
- <header>
-  <div class="container-header">
-    <button type="button" class="hamburger" id="hamburger-btn" aria-label="Abrir menu de navegação">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
+        <h1>🍪 Sra. Cookies 🥤</h1>
 
-    <h1>🍪 Sra. Cookies 🥤</h1>
+        <nav id="nav-menu">
+          <a href="index.html" id="menu1">Cookies</a>
+          <a href="bebidas.html" id="menu2">Bebidas</a>
+          <a href="contato.html" id="menu3">Contato</a>
+        </nav>
 
-    <nav id="nav-menu">
-      <a href="index.html" id="menu1">Cookies</a>
-      <a href="bebidas.html" id="menu2">Bebidas</a>
-      <a href="contato.html" id="menu3">Contato</a>
-    </nav>
+        <div class="carrinho-topo" id="abrirCarrinho">
+          🛒
+          <span id="contador-carrinho">0</span>
+        </div>
+      </div>
+    </header>
 
-    <div class="carrinho-topo" id="abrirCarrinho">
-      🛒
-      <span id="contador-carrinho">0</span>
-    </div>
-  </div>
-</header>
+    <section class="produtos">
+      <h2>Nossas bebidas</h2>
 
-  <section class="produtos">
-    <h2>Nossas bebidas</h2>
+      <div class="card">
+        <img
+          src="https://framerusercontent.com/images/jVkMSnCNpxbIbtrmduAjFsh9q8.png?scale-down-to=1024&width=1536&height=2048"
+          alt="Cappuccino"
+        />
+        <h3>Cappuccino</h3>
+        <p>
+          Sorvete de baunilha, leite gelado, caramelo, cappuccio e chantily.
+        </p>
+        <span>R$ 15,90</span>
+        <button>Comprar</button>
+      </div>
 
-    <div class="card">
-      <img src="https://framerusercontent.com/images/jVkMSnCNpxbIbtrmduAjFsh9q8.png?scale-down-to=1024&width=1536&height=2048" alt="Cappuccino">
-      <h3>Cappuccino</h3>
-      <p>Sorvete de baunilha, leite gelado, caramelo, cappuccio e chantily.</p>
-      <span>R$ 15,90</span>
-      <button>Comprar</button>
-    </div>
+      <div class="card">
+        <img
+          src="https://framerusercontent.com/images/jzjV8aXMUFqwEeXtO12UObFlBA.png?scale-down-to=1024&width=1536&height=2048"
+          alt="Cappuccino"
+        />
+        <h3>Fluffy</h3>
+        <p>
+          Iogurte de morango, Leite, sorvete de baunilha, nesquik, cream cheese
+          e chantilly
+        </p>
+        <span>R$ 19,90</span>
+        <button>Comprar</button>
+      </div>
 
-    <div class="card">
-      <img src="https://framerusercontent.com/images/jzjV8aXMUFqwEeXtO12UObFlBA.png?scale-down-to=1024&width=1536&height=2048" alt="Cappuccino">
-      <h3>Fluffy</h3>
-      <p> Iogurte de morango, Leite, sorvete de baunilha, nesquik, cream cheese e chantilly</p>
-      <span>R$ 19,90</span>
-      <button>Comprar</button>
-    </div>
+      <div class="card">
+        <img
+          src="https://framerusercontent.com/images/YI3nEOdMc8dQyk5PRd1b9ACVXDk.png?scale-down-to=1024&width=1536&height=2048"
+          alt="Ice pistache"
+        />
+        <h3>Ice pistache</h3>
+        <p>Leite gelado, creme de pistache, sorvete de baunilha e chantilly</p>
+        <span>R$ 15,90</span>
+        <button>Comprar</button>
+      </div>
 
-    <div class="card">
-      <img src="https://framerusercontent.com/images/YI3nEOdMc8dQyk5PRd1b9ACVXDk.png?scale-down-to=1024&width=1536&height=2048" alt="Ice pistache">
-      <h3>Ice pistache </h3>
-      <p>Leite gelado, creme de pistache, sorvete de baunilha e chantilly</p>
-      <span>R$ 15,90</span>
-      <button>Comprar</button>
-    </div>
+      <div class="painel-carrinho">
+        <h2>Seu Carrinho</h2>
+        <ul id="lista-carrinho"></ul>
+        <p id="total">Total: R$ 0,00</p>
+        <button id="finalizar">Finalizar Pedido</button>
+      </div>
 
-    <div class="painel-carrinho">
-  <h2>Seu Carrinho</h2>
-  <ul id="lista-carrinho"></ul>
-  <p id="total">Total: R$ 0,00</p>
-  <button id="finalizar">Finalizar Pedido</button>
-</div>
-
-<footer>
-  <div class="social-icons">
-    <a href="#" aria-label="Link para o Instagram"><i class="fab fa-instagram"></i></a>
-    <a href="#" aria-label="Link para o Facebook"><i class="fab fa-facebook-f"></i></a>
-    <a href="#" aria-label="Link para o WhatsApp"><i class="fab fa-whatsapp"></i></a>
-  </div>
-  <p>&copy; 2025 Cookie Store. Todos os direitos reservados.</p>
-</footer>
-    
-
-  </section>
-</body>
+      <footer>
+        <div class="social-icons">
+          <a href="#" aria-label="Link para o Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" aria-label="Link para o Facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" aria-label="Link para o WhatsApp"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+        </div>
+        <p>&copy; 2025 Cookie Store. Todos os direitos reservados.</p>
+      </footer>
+    </section>
+  </body>
 </html>
