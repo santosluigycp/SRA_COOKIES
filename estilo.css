@@ -365,11 +365,7 @@ header nav a img.icon {
 
 /* Para telas menores que 768px (tablets) */
 @media (max-width: 768px) {
-  .container-header {
-    flex-direction: column;
-    gap: 15px;
-  }
-
+  
   header nav {
     flex-direction: column;
     gap: 10px;
@@ -439,4 +435,63 @@ header nav a img.icon {
 
 .info-contato a:hover {
   text-decoration: underline; /* Adiciona o sublinhado apenas ao passar o mouse */
+}
+
+/* --- Estilos do Menu Hamburguer --- */
+
+.hamburger {
+  display: none; /* Escondido por padrão em telas grandes */
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+/* --- Lógica Responsiva do Menu --- */
+@media (max-width: 768px) {
+  /* 1. Esconde a navegação principal */
+  #nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 75px; /* Altura do cabeçalho */
+    left: 0;
+    width: 100%;
+    background-color: #d2691e; /* Mesma cor do header */
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  /* 2. Classe que o JS vai adicionar para MOSTRAR o menu */
+  #nav-menu.nav-aberta {
+    display: flex;
+  }
+
+  /* 3. Mostra o botão hamburguer */
+  .hamburger {
+    display: block;
+    order: -1; /* Coloca o hamburguer antes do título */
+  }
+
+  /* 4. Ajusta o container do header para o novo layout */
+  .container-header {
+    justify-content: space-between; /* Garante espaço entre os itens */
+  }
+  
+  /* 5. Centraliza o título no espaço que sobra */
+  .container-header h1 {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 0 15px;
+  }
 }

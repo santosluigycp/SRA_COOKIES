@@ -7,7 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const totalElemento = document.getElementById('total');
   const botoesComprar = document.querySelectorAll('.card button');
   const botaoFinalizar = document.getElementById('finalizar');
+  // --- LÓGICA DO MENU HAMBURGUER ---
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const navMenu = document.getElementById('nav-menu');
 
+  if (hamburgerBtn && navMenu) {
+    hamburgerBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('nav-aberta');
+    });
+  }
   // --- LÓGICA PARA ABRIR E FECHAR O PAINEL DO CARRINHO ---
   if (abrirCarrinhoBtn && painelCarrinho) {
     abrirCarrinhoBtn.addEventListener('click', () => {
