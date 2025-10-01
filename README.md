@@ -2,6 +2,12 @@
 
 Este é o projeto de front-end para a "Sra. Cookies", uma loja virtual simples para a venda de cookies e bebidas. O site foi desenvolvido com foco em uma interface limpa, responsiva e com funcionalidades de e-commerce essenciais.
 
+## :camera: Preview do Projeto
+
+Para uma melhor visualização, aqui está um mockup do site em funcionamento.
+
+![Preview do site FinanNews em um mockup de notebook](https://github.com/santosluigycp/BLOG_FINANCIAS_v2.0/blob/main/WebDesign%20mockup.png)
+
 ## ✨ Funcionalidades
 
 - **Visualização de Produtos:** Páginas separadas para Cookies e Bebidas com cards de produtos.
