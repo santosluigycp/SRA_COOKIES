@@ -256,11 +256,19 @@ footer {
   font-family: 'Arial', sans-serif;
 }
 
+/* --- Melhorias no Texto Superior da Página de Contato --- */
+
+/* Garante que o título principal da seção de contato esteja centralizado */
 .contato h2 {
   text-align: center;
-  font-family: 'Georgia', serif;
-  margin-bottom: 25px;
-  color: #8b4513;
+  margin-bottom: 10px;
+}
+
+/* Seleciona APENAS o parágrafo que é filho direto da seção .contato */
+.contato > p {
+  text-align: center;    /* Centraliza o parágrafo de introdução */
+  line-height: 1.6;      /* Aumenta o espaço entre as linhas do texto */
+  margin-bottom: 15px;   /* Cria um espaço maior antes de iniciar o formulário */
 }
 
 .contato label {
@@ -306,13 +314,6 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-/* Nav com ícones */
-header nav {
-  display: flex;
-  align-items: center;
-  gap: 25px;
 }
 
 /* Ícones padrão */
@@ -407,4 +408,35 @@ header nav a img.icon {
   .painel-carrinho.aberto {
     right: 0;
   }
+}
+
+/* --- Melhorias na Página de Contato --- */
+
+.form-contato {
+  /* Adiciona um espaço maior entre o botão "Enviar" e a seção de informações */
+  margin-bottom: 30px;
+}
+
+.info-contato {
+  padding-top: 20px; /* Cria um respiro acima do título "Informações de Contato" */
+  border-top: 1px solid #e0d2c0; /* Adiciona uma linha sutil de separação */
+  text-align: left; /* Garante o alinhamento de todo o bloco à esquerda */
+}
+
+.info-contato h3 {
+  margin-bottom: 15px; /* Adiciona um espaço abaixo do título */
+}
+
+.info-contato p {
+  margin-bottom: 10px; /* Adiciona um espaçamento entre as linhas (WhatsApp, Email, etc) */
+}
+
+.info-contato a {
+  color: #d2691e; /* Deixa o link com a cor principal do site */
+  text-decoration: none; /* Remove o sublinhado padrão */
+  font-weight: bold;
+}
+
+.info-contato a:hover {
+  text-decoration: underline; /* Adiciona o sublinhado apenas ao passar o mouse */
 }
