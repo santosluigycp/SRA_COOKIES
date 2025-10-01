@@ -6,7 +6,7 @@ Este é o projeto de front-end para a "Sra. Cookies", uma loja virtual simples p
 
 Para uma melhor visualização, aqui está um mockup do site em funcionamento.
 
-![Preview do site FinanNews em um mockup de notebook]([mpckup sra cookies.jpg](https://github.com/santosluigycp/SRA_COOKIES/blob/main/mpckup%20sra%20cookies.jpg))
+![Preview do site FinanNews em um mockup de notebook](https://github.com/santosluigycp/SRA_COOKIES/blob/main/mpckup%20sra%20cookies.jpg)
 
 ## ✨ Funcionalidades
 
