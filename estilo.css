@@ -495,3 +495,26 @@ header nav a img.icon {
     margin: 0 15px;
   }
 }
+
+/* --- Estilos do Rodapé com Ícones Sociais --- */
+
+footer {
+  /* Garante que o texto e os ícones fiquem alinhados */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Espaçamento entre a área dos ícones e o texto de copyright */
+}
+
+.social-icons a {
+  color: #6b4226; /* Cor dos ícones, combinando com o site */
+  font-size: 1.8rem; /* Tamanho dos ícones */
+  margin: 0 15px; /* Espaçamento entre os ícones */
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease; /* Animação suave */
+}
+
+.social-icons a:hover {
+  color: #d2691e; /* Muda para a cor principal ao passar o mouse */
+  transform: scale(1.2); /* Efeito de zoom sutil */
+}

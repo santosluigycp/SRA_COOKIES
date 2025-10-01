@@ -44,9 +44,14 @@ document.addEventListener('click', (event) => {
 
   // Função para atualizar a exibição do carrinho na tela
   function atualizarCarrinho() {
-    // Garante que o código não quebre em páginas que não têm a lista (como a de contato)
-    if (!listaCarrinho) return;
+  // 1. Atualiza o contador em TODAS as páginas
+  contadorCarrinho.textContent = carrinho.length;
 
+  // 2. Salva o estado atual no localStorage
+  salvarCarrinhoStorage();
+
+  // 3. Só tenta atualizar a lista detalhada e o total se os elementos existirem
+  if (listaCarrinho && totalElemento) {
     listaCarrinho.innerHTML = '';
     let total = 0;
 
@@ -57,12 +62,9 @@ document.addEventListener('click', (event) => {
       total += item.preco;
     });
 
-    contadorCarrinho.textContent = carrinho.length;
     totalElemento.textContent = `Total: R$ ${total.toFixed(2).replace('.', ',')}`;
-
-    salvarCarrinhoStorage();
   }
-
+}
   // Adiciona o evento de clique para cada botão "Comprar"
   botoesComprar.forEach(botao => {
     botao.addEventListener('click', (e) => {
