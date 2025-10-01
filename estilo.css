@@ -67,7 +67,11 @@ header nav a:hover {
   display: flex;
   align-items: center;
   transition: background-color 0.3s;
-  user-select: none;
+  /* Adicionado para maior compatibilidade */
+  -webkit-user-select: none; /* Safari, Chrome */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* Internet Explorer, Edge */
+  user-select: none;         /* Padrão */
 }
 
 .carrinho-topo:hover {
@@ -354,4 +358,53 @@ header nav a img.icon {
 
 #menu1, #menu2, #menu3  {
   color:black
+}
+
+/* Media Queries para Responsividade */
+
+/* Para telas menores que 768px (tablets) */
+@media (max-width: 768px) {
+  .container-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  header nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card {
+    width: 45%; /* Dois cards por linha */
+  }
+
+  .contato {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+
+/* Para telas menores que 480px (smartphones) */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .produtos h2 {
+    font-size: 1.8rem;
+  }
+
+  .card {
+    width: 90%; /* Um card por linha */
+    margin: 15px auto;
+  }
+
+  .painel-carrinho {
+    width: 100%;
+    right: -100%;
+  }
+
+  .painel-carrinho.aberto {
+    right: 0;
+  }
 }
