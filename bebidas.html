@@ -12,7 +12,9 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8">
+    <!-- Bloco de metadados padrão, otimizado para a página de bebidas. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <!-- A descrição e palavras-chave foram atualizadas para refletir o conteúdo específico desta página (Bebidas), melhorando o SEO. -->
     <meta
       name="description"
       content="Refresque seu dia com as bebidas especiais da Sra. Cookies. Experimente nosso Cappuccino, Fluffy de morango e o delicioso Ice Pistache."
@@ -22,6 +24,7 @@
       content="bebidas, cappuccino, milkshake, ice pistache, fluffy, bebidas geladas"
     >
     <title>Loja de Cookies</title>
+    <!-- Os links para favicon, folhas de estilo (CSS) e scripts (JS) são os mesmos da página principal, garantindo consistência visual e funcional. -->
     <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20100%20100%27%3E%3Ctext%20y%3D%27.9em%27%20font-size%3D%2790%27%3E%F0%9F%8D%AA%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="estilo.css">
     <script src="script.js"></script>
@@ -37,6 +40,7 @@
     >
   </head>
   <body>
+    <!-- O cabeçalho é um componente reutilizável, idêntico ao da página index.html, mantendo a identidade visual e a navegação consistentes. -->
     <header>
       <div class="container-header">
         <button
@@ -65,10 +69,15 @@
         </div>
       </div>
     </header>
+    
+    <!-- Conteúdo principal da página, focado na listagem de bebidas. -->
     <main>
       <section class="produtos">
         <h2>Nossas bebidas</h2>
 
+        <!-- A estrutura de 'card' é utilizada aqui da mesma forma que na página de cookies, demonstrando um padrão de componente reutilizável. -->
+        
+        <!-- Card 1: Cappuccino -->
         <div class="card">
           <img
             src="https://framerusercontent.com/images/jVkMSnCNpxbIbtrmduAjFsh9q8.png?scale-down-to=1024&width=1536&height=2048"
@@ -79,13 +88,14 @@
             Sorvete de baunilha, leite gelado, caramelo, cappuccio e chantily.
           </p>
           <span>R$ 15,90</span>
-          <button>Comprar</button>
+          <button type="button">Comprar</button>
         </div>
 
+        <!-- Card 2: Fluffy -->
         <div class="card">
           <img
             src="https://framerusercontent.com/images/jzjV8aXMUFqwEeXtO12UObFlBA.png?scale-down-to=1024&width=1536&height=2048"
-            alt="Cappuccino"
+            alt="Fluffy de morango" <!-- NOTA: O 'alt' da imagem anterior também era 'Cappuccino', talvez deva ser 'Fluffy de morango' para maior especificidade. -->
           >
           <h3>Fluffy</h3>
           <p>
@@ -93,9 +103,10 @@
             cheese e chantilly
           </p>
           <span>R$ 19,90</span>
-          <button>Comprar</button>
+          <button type="button">Comprar</button>
         </div>
 
+        <!-- Card 3: Ice pistache -->
         <div class="card">
           <img
             src="https://framerusercontent.com/images/YI3nEOdMc8dQyk5PRd1b9ACVXDk.png?scale-down-to=1024&width=1536&height=2048"
@@ -106,9 +117,10 @@
             Leite gelado, creme de pistache, sorvete de baunilha e chantilly
           </p>
           <span>R$ 15,90</span>
-          <button>Comprar</button>
+          <button type="button">Comprar</button>
         </div>
 
+        <!-- O painel do carrinho de compras é o mesmo componente compartilhado, garantindo a funcionalidade de e-commerce nesta página também. -->
         <div class="painel-carrinho">
           <h2>Seu Carrinho</h2>
           <ul id="lista-carrinho"></ul>
@@ -116,6 +128,7 @@
           <button id="finalizar">Finalizar Pedido</button>
         </div>
 
+        <!-- O rodapé aqui está localizado dentro da seção 'produtos'. Ele também é um componente reutilizável. -->
         <footer>
           <div class="social-icons">
             <a href="#" aria-label="Link para o Instagram"

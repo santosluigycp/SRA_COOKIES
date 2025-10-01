@@ -11,6 +11,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <!-- O cabeçalho (<head>) segue o padrão do site, com metadados e título ajustados para a página de contato, otimizando o SEO. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta
@@ -22,7 +23,8 @@
       content="contato, encomenda, telefone, endereço, Sra. Cookies, falar com"
     >
     <title>Contato - Sra. Cookies</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20100%20100%27%3E%3Ctext%20y%3D%27.9em%27%20font-size%3D%2790%27%3E%F0%9F%8D%AA%3C/text%3E%3C/svg%3E">
+    <!-- Links para assets (favicon, CSS, JS, fontes) permanecem os mesmos para manter a consistência global do site. -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20100%20100%27%3E%3Ctext%20y%3D%27.9em%27%20font-size%3D%2790%27%3E%FО%9F%8D%AA%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="estilo.css" >
     <script src="script.js"></script>
     <link
@@ -38,6 +40,7 @@
   </head>
 
   <body>
+    <!-- O componente de cabeçalho (<header>) é reutilizado, garantindo uma experiência de navegação uniforme em todo o site. -->
     <header>
       <div class="container-header">
         <button
@@ -66,47 +69,56 @@
         </div>
       </div>
     </header>
+    
+    <!-- Conteúdo principal focado na interação com o usuário através de um formulário e informações de contato. -->
     <main>
-    <section class="contato">
-      <h2>Fale com a gente!</h2>
-      <p>
-        Tem dúvidas, sugestões ou quer fazer uma encomenda personalizada?
-        Preencha o formulário abaixo ou nos mande uma mensagem pelo WhatsApp!
-      </p>
-      <p></p>
-
-      <form action="#" method="POST" class="form-contato">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required >
-
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required >
-
-        <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-
-        <button type="submit">Enviar Mensagem</button>
-      </form>
-
-      <div class="info-contato">
-        <h3>📞 Informações de Contato</h3>
+      <section class="contato">
+        <h2>Fale com a gente!</h2>
         <p>
-          WhatsApp:
-          <a
-            href="https://wa.me/5540028922"
-            target="_blank"
-            rel="noopener noreferrer"
-            >(99) 940028922</a
-          >
+          Tem dúvidas, sugestões ou quer fazer uma encomenda personalizada?
+          Preencha o formulário abaixo ou nos mande uma mensagem pelo WhatsApp!
         </p>
-        <p>
-          Email:
-          <a href="mailto:contato@sracookies.com">contato@sracookies.com</a>
-        </p>
-        <p>Endereço: Rua dos Cookies, 123 - CookieTown</p>
-      </div>
-    </section>
+        
+        <!-- Formulário de contato para envio de mensagens. O atributo 'action'="#" é um placeholder e deve ser substituído por um endpoint de backend para processar os dados. -->
+        <form action="#" method="POST" class="form-contato">
+          <!-- O atributo 'for' no label está associado ao 'id' do input, uma prática essencial para acessibilidade. -->
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required >
+
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required >
+
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+          <!-- O atributo 'required' nos campos garante a validação básica no lado do cliente, impedindo o envio do formulário com campos vazios. -->
+
+          <button type="submit">Enviar Mensagem</button>
+        </form>
+
+        <!-- Seção com métodos de contato alternativos. -->
+        <div class="info-contato">
+          <h3>📞 Informações de Contato</h3>
+          <p>
+            WhatsApp:
+            <!-- O link 'wa.me' direciona para o chat do WhatsApp. 'target="_blank"' abre o link em uma nova aba. -->
+            <a
+              href="https://wa.me/5540028922"
+              target="_blank"
+              rel="noopener noreferrer"
+              >(99) 940028922</a
+            >
+          </p>
+          <p>
+            Email:
+            <!-- O link 'mailto:' abre o cliente de e-mail padrão do usuário. -->
+            <a href="mailto:contato@sracookies.com">contato@sracookies.com</a>
+          </p>
+          <p>Endereço: Rua dos Cookies, 123 - CookieTown</p>
+        </div>
+      </section>
     </main>
+    
+    <!-- O painel do carrinho está presente fora do <main>, permitindo que o usuário acesse seu carrinho de qualquer página do site. -->
     <div class="painel-carrinho">
       <h2>Seu Carrinho</h2>
       <ul id="lista-carrinho"></ul>
@@ -114,20 +126,21 @@
       <button type="button" id="finalizar">Finalizar Pedido</button>
     </div>
 
+    <!-- Rodapé padrão do site, semanticamente posicionado após o conteúdo principal. -->
     <footer>
-  <div class="social-icons">
-    <a href="#" aria-label="Link para o Instagram"><i class="fab fa-instagram"></i></a>
-    <a href="#" aria-label="Link para o Facebook"><i class="fab fa-facebook-f"></i></a>
-    <a href="#" aria-label="Link para o WhatsApp"><i class="fab fa-whatsapp"></i></a>
-  </div>
+      <div class="social-icons">
+        <a href="#" aria-label="Link para o Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Link para o Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Link para o WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
 
-  <div class="w3c-seal">
-    <a href="https://jigsaw.w3.org/css-validator/check/referer">
-      <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="CSS válido!">
-    </a>
-  </div>
+      <div class="w3c-seal">
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+          <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="CSS válido!">
+        </a>
+      </div>
 
-  <p>&copy; 2025 Cookie Store. Todos os direitos reservados.</p>
-</footer>
+      <p>&copy; 2025 Cookie Store. Todos os direitos reservados.</p>
+    </footer>
   </body>
 </html>

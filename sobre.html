@@ -15,9 +15,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sobre o Projeto - Sra. Cookies</title>
   
+  <!-- Metadados específicos para a página 'Sobre', focados em descrever o projeto para fins de portfólio e SEO. -->
   <meta name="description" content="Conheça a história e a motivação por trás do projeto da loja virtual Sra. Cookies, um site criado com HTML, CSS e JavaScript.">
   <meta name="keywords" content="sobre, projeto, sra. cookies, desenvolvimento, portfólio, mockup">
   
+  <!-- Os links para assets (favicon, fontes e CSS) seguem o padrão do site para manter a consistência visual. -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20100%20100%27%3E%3Ctext%20y%3D%27.9em%27%20font-size%3D%2790%27%3E%F0%9F%8D%AA%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,37 +29,42 @@
 </head>
 <body>
 
+  <!-- O cabeçalho (<header>) é o componente reutilizável padrão, garantindo a navegação consistente. -->
   <header>
     <div class="container-header">
       <button type="button" class="hamburger" id="hamburger-btn" aria-label="Abrir menu de navegação">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
       <h1>🍪 Sra. Cookies</h1>
-       <nav id="nav-menu">
-          <a href="index.html" id="menu1">Cookies</a>
-          <a href="bebidas.html" id="menu2">Bebidas</a>
-          <a href="contato.html" id="menu3">Contato</a>
-          <a href="sobre.html" id="menu4">Sobre</a>
-        </nav>
+      <nav id="nav-menu">
+        <a href="index.html" id="menu1">Cookies</a>
+        <a href="bebidas.html" id="menu2">Bebidas</a>
+        <a href="contato.html" id="menu3">Contato</a>
+        <a href="sobre.html" id="menu4">Sobre</a>
+      </nav>
       <div class="carrinho-topo" id="abrirCarrinho">
         🛒 <span id="contador-carrinho">0</span>
       </div>
     </div>
   </header>
 
+  <!-- Conteúdo principal da página, com uma classe específica 'container-sobre' para estilização. -->
   <main class="container-sobre">
     <section class="sobre-projeto">
       <h2>Sobre o Projeto Sra. Cookies</h2>
 
+      <!-- A estrutura utiliza títulos H3 para criar subseções, o que é semanticamente correto e bom para a organização do conteúdo. -->
       <h3>💡 Motivação e Contexto</h3>
       <p>A ideia para este projeto nasceu da paixão e do sonho de um dos membros da equipe em criar seu próprio negócio no ramo da confeitaria, com foco em cookies de alta qualidade. Mais do que apenas um projeto técnico, esta loja virtual representa o primeiro passo para transformar essa aspiração em realidade, servindo como um protótipo funcional e uma plataforma de lançamento para a marca "Sra. Cookies". O objetivo foi construir uma experiência de compra online tão calorosa e convidativa quanto o aroma de cookies recém-saídos do forno.</p>
 
       <h3>🖥️ Visualização do Projeto (Mockup)</h3>
       <p>Abaixo, uma demonstração de como o site se adapta a diferentes dispositivos, garantindo uma experiência de usuário consistente e agradável.</p>
       
+      <!-- Imagem de mockup para ilustrar a responsividade do projeto. O atributo 'alt' é descritivo, favorecendo a acessibilidade. -->
       <img src="mockup.jpg" alt="Mockup do site Sra. Cookies em diferentes dispositivos" class="mockup-img">
 
       <h3>✨ Funcionalidades</h3>
+      <!-- Lista não ordenada (<ul>) para apresentar as funcionalidades de forma clara e concisa. -->
       <ul>
         <li><strong>Visualização de Produtos:</strong> Páginas separadas para Cookies e Bebidas.</li>
         <li><strong>Carrinho de Compras:</strong> Persistência de dados entre sessões utilizando <code>localStorage</code>.</li>
@@ -67,6 +74,7 @@
       </ul>
 
       <h3>🛠️ Tecnologias Utilizadas</h3>
+      <!-- Lista das tecnologias empregadas, utilizando <strong> para destaque e <code> para termos técnicos. -->
       <ul>
         <li><strong>HTML5:</strong> Estruturação semântica e acessível.</li>
         <li><strong>CSS3:</strong> Estilização moderna e responsiva com Flexbox.</li>
@@ -74,23 +82,32 @@
       </ul>
     </section>
   </main>
+  
+  <!-- O painel do carrinho de compras e o rodapé seguem o padrão das outras páginas, localizados após o conteúdo principal. -->
+  <div class="painel-carrinho">
+    <h2>Seu Carrinho</h2>
+    <ul id="lista-carrinho"></ul>
+    <p id="total">Total: R$ 0,00</p>
+    <button type="button" id="finalizar">Finalizar Pedido</button>
+  </div>
 
   <footer>
-  <div class="social-icons">
-    <a href="#" aria-label="Link para o Instagram"><i class="fab fa-instagram"></i></a>
-    <a href="#" aria-label="Link para o Facebook"><i class="fab fa-facebook-f"></i></a>
-    <a href="#" aria-label="Link para o WhatsApp"><i class="fab fa-whatsapp"></i></a>
-  </div>
+    <div class="social-icons">
+      <a href="#" aria-label="Link para o Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Link para o Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Link para o WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
 
-  <div class="w3c-seal">
-    <a href="https://jigsaw.w3.org/css-validator/check/referer">
-      <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="CSS válido!">
-    </a>
-  </div>
+    <div class="w3c-seal">
+      <a href="https://jigsaw.w3.org/css-validator/check/referer">
+        <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="CSS válido!">
+      </a>
+    </div>
 
-  <p>&copy; 2025 Cookie Store. Todos os direitos reservados.</p>
-</footer>
+    <p>&copy; 2025 Cookie Store. Todos os direitos reservados.</p>
+  </footer>
 
+  <!-- O script 'script.js' é carregado ao final do <body>. Esta é a melhor prática para performance, pois garante que todo o HTML seja renderizado antes da execução do JavaScript. -->
   <script src="script.js"></script>
 </body>
 </html>

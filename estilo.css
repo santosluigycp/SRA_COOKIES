@@ -6,7 +6,8 @@
   Arquivo de estilização principal do site.
 */
 
-/* Reset básico */
+/* Reset básico para remover margens e preenchimentos padrão do navegador. 
+'box-sizing: border-box' faz com que padding e border não aumentem a largura final do elemento. */
 * {
   margin: 0;
   padding: 0;
@@ -14,99 +15,99 @@
 }
 
 /* =================================
-   ESTILOS GERAIS (BODY, RESET)
+    ESTILOS GERAIS (BODY, FONTES)
    ================================= */
 body {
-  font-family: "Lato", sans-serif;
-  background-color: #fff8f2;
-  color: #4d3b29;
-  min-height: 100vh;
+  font-family: "Lato", sans-serif; /* Fonte principal para o corpo do texto. */
+  background-color: rgb(255, 248, 242); /* Cor de fundo suave, remetendo a confeitaria. */
+  color: rgb(77, 59, 41); /* Cor de texto principal, com bom contraste. */
+  min-height: 100vh; /* Garante que o corpo ocupe pelo menos toda a altura da tela. */
 }
 
 /* =================================
-   CABEÇALHO E NAVEGAÇÃO
+    CABEÇALHO E NAVEGAÇÃO
    ================================= */
 header {
-  background-color: #d2691e;
-  color: white;
+  background-color: rgb(210, 105, 30); /* Cor de destaque da marca. */
+  color: rgb(255, 255, 255);
   padding: 20px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidade. */
 }
 
+/* Contêiner principal do cabeçalho que utiliza Flexbox para alinhar os itens. */
 .container-header {
-  max-width: 1100px;
-  margin: auto;
+  max-width: 1100px; /* Limita a largura do conteúdo para melhor legibilidade em telas grandes. */
+  margin: auto; /* Centraliza o contêiner. */
   padding: 0 20px;
-
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between; /* Distribui os itens: título à esquerda, nav no meio, carrinho à direita. */
+  align-items: center; /* Alinha verticalmente todos os itens no centro. */
 }
 
-/* Título */
+/* Título principal com a fonte decorativa 'Pacifico'. */
 header h1 {
   font-family: "Pacifico", cursive;
   font-size: 2.5rem;
 }
 
-/* Navegação centralizada */
+/* Faz o menu de navegação ocupar o espaço flexível disponível. */
 header nav {
   flex-grow: 1;
   text-align: center;
 }
 
 header nav a {
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   margin: 0 20px;
   font-weight: bold;
   font-size: 1.1rem;
-  transition: color 0.3s;
+  transition: color 0.3s; /* Transição suave para o efeito hover. */
 }
 
 header nav a:hover {
-  color: #f0e5d8;
+  color: rgb(240, 229, 216);
 }
 
 /* =================================
-   ÍCONE DO CARINHO
+    ÍCONE DO CARRINHO
    ================================= */
 .carrinho-topo {
   cursor: pointer;
-  background-color: #fff;
-  color: #d2691e;
+  background-color: rgb(255, 255, 255);
+  color: rgb(210, 105, 30);
   padding: 8px 16px;
   border-radius: 25px;
-  font-weight: bold;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
   display: flex;
   align-items: center;
   transition: background-color 0.3s;
-  /* Adicionado para maior compatibilidade */
-  -webkit-user-select: none; /* Safari, Chrome */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer, Edge */
-  user-select: none; /* Padrão */
+  user-select: none; /* Impede que o texto seja selecionado ao clicar, melhorando a experiência de "botão". */
+  /* Adicionado para maior compatibilidade com navegadores */
+  -webkit-user-select: none; /* Para Safari, Chrome e outros baseados em WebKit */
+  -moz-user-select: none;    /* Para Firefox */
+  -ms-user-select: none;     /* Para Internet Explorer e Edge antigo */
+  user-select: none;         /* A versão padrão, sempre por último */
 }
 
 .carrinho-topo:hover {
-  background-color: #f5f5f5;
+  background-color: rgb(245, 245, 245);
 }
 
+/* Estilo para a "bolha" de contagem de itens no carrinho. */
 .carrinho-topo span {
-  background-color: #d2691e;
-  color: white;
+  background-color: rgb(210, 105, 30);
+  color: rgb(255, 255, 255);
   padding: 2px 8px;
-  border-radius: 50%;
+  border-radius: 50%; /* Cria o formato circular. */
   margin-left: 8px;
-  font-weight: bold;
   font-size: 0.9rem;
   min-width: 20px;
   text-align: center;
 }
 
 /* =================================
-   ÁREA DOS PRODUTOS
+    ÁREA DOS PRODUTOS
    ================================= */
 .produtos {
   padding: 40px 20px;
@@ -119,45 +120,46 @@ header nav a:hover {
   margin-bottom: 30px;
   font-size: 2.2rem;
   font-family: "Pacifico", cursive;
-  color: #8b4513;
+  color: rgb(139, 69, 19);
 }
 
-/* Cards dos produtos */
+/* Estilo base para o card de produto, um componente reutilizável. */
 .card {
-  background-color: #fff;
-  border: 1px solid #e0d2c0;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(224, 210, 192);
   border-radius: 10px;
-  display: inline-block;
+  display: inline-block; /* Permite que os cards fiquem lado a lado. */
   width: 250px;
   margin: 20px;
   padding: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  vertical-align: top;
+  vertical-align: top; /* Alinha os cards pelo topo. */
   text-align: center;
 }
 
 .card img {
   width: 100%;
   height: 200px;
-  object-fit: cover;
+  object-fit: cover; /* Garante que a imagem cubra a área sem distorcer. */
   border-radius: 5px;
-  transition: transform 0.3s ease; /* Suaviza o efeito */
+  transition: transform 0.3s ease;
 }
 
+/* Efeito de zoom sutil na imagem ao passar o mouse. */
 .card img:hover {
-  transform: scale(1.5); /* Aumenta a imagem em 5% */
+  transform: scale(1.05); 
 }
 
 .card h3 {
   margin: 10px 0;
   font-size: 1.3rem;
-  color: #6b4226;
+  color: rgb(107, 66, 38);
 }
 
 .card p {
   font-size: 0.95rem;
   margin: 10px 0 15px;
-  min-height: 50px;
+  min-height: 50px; /* Garante que os cards tenham a mesma altura, mesmo com descrições de tamanhos diferentes. */
 }
 
 .card span {
@@ -165,12 +167,12 @@ header nav a:hover {
   font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 15px;
-  color: #d2691e;
+  color: rgb(210, 105, 30);
 }
 
 .card button {
-  background-color: #d2691e;
-  color: white;
+  background-color: rgb(210, 105, 30);
+  color: rgb(255, 255, 255);
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -180,287 +182,69 @@ header nav a:hover {
 }
 
 .card button:hover {
-  background-color: #a0522d;
+  background-color: rgb(160, 82, 45);
 }
 
 /* =================================
-   FOOTER
+    PAINEL LATERAL DO CARRINHO
    ================================= */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #f0e5d8;
-  margin-top: 40px;
-  font-size: 0.9rem;
-  color: #6b4226;
-}
-
-/* --- Estilo do painel lateral do carrinho --- */
 .painel-carrinho {
-  position: fixed;
+  position: fixed; /* Fixo na tela, não rola com a página. */
   top: 0;
-  right: -320px; /* escondido inicialmente */
+  right: -320px; /* Posição inicial fora da tela, à direita. */
   width: 320px;
   height: 100vh;
-  background-color: #fff8f2;
+  background-color: rgb(255, 248, 242);
   box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
   padding: 20px;
-  box-sizing: border-box;
-  transition: right 0.3s ease;
-  overflow-y: auto;
-  z-index: 1000;
-  font-family: "Arial", sans-serif;
-  color: #4d3b29;
+  transition: right 0.3s ease; /* Animação de deslize para abrir/fechar. */
+  overflow-y: auto; /* Adiciona scroll se os itens ultrapassarem a altura. */
+  z-index: 1000; /* Garante que o painel fique sobre todos os outros elementos. */
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Organiza os itens internos em coluna. */
 }
 
+/* Classe 'aberto' (adicionada via JS) que torna o painel visível. */
 .painel-carrinho.aberto {
   right: 0;
 }
 
-.painel-carrinho h2 {
-  margin-bottom: 20px;
-  font-size: 1.8rem;
-  border-bottom: 2px solid #d2691e;
-  padding-bottom: 10px;
-}
-
 #lista-carrinho {
   list-style: none;
-  flex-grow: 1;
+  flex-grow: 1; /* Faz a lista de itens ocupar todo o espaço vertical disponível. */
   overflow-y: auto;
   padding-left: 0;
   margin-bottom: 20px;
 }
 
-#lista-carrinho li {
-  padding: 8px 0;
-  border-bottom: 1px solid #e0d2c0;
-  font-size: 1rem;
-}
-
-#total {
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  color: #d2691e;
-}
-
-#finalizar {
-  background-color: #d2691e;
-  color: white;
-  border: none;
-  padding: 12px;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-#finalizar:hover {
-  background-color: #a0522d;
-}
-
-/* Formatação do formulário de contato */
-.contato {
-  max-width: 500px;
-  margin: 40px auto;
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-  color: #4d3b29;
-  font-family: "Arial", sans-serif;
-}
-
-/* --- Melhorias no Texto Superior da Página de Contato --- */
-
-/* Garante que o título principal da seção de contato esteja centralizado */
-.contato h2 {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-/* Seleciona APENAS o parágrafo que é filho direto da seção .contato */
-.contato > p {
-  text-align: center; /* Centraliza o parágrafo de introdução */
-  line-height: 1.6; /* Aumenta o espaço entre as linhas do texto */
-  margin-bottom: 15px; /* Cria um espaço maior antes de iniciar o formulário */
-}
-
-.contato label {
-  font-weight: bold;
-  margin-bottom: 5px;
-  display: block;
-}
-
-.contato input[type="text"],
-.contato input[type="email"],
-.contato textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #d2691e;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  font-size: 1rem;
-  font-family: "Arial", sans-serif;
-  color: #4d3b29;
-  resize: vertical;
-}
-
-.contato button {
-  background-color: #d2691e;
-  color: white;
-  border: none;
-  padding: 12px;
-  width: 100%;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.contato button:hover {
-  background-color: #a0522d;
-}
-/* Container flex do cabeçalho */
-.container-header {
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Ícones padrão */
-header nav a img.icon {
-  width: 30px;
-  height: 30px;
-  filter: invert(100%);
-  cursor: pointer;
-}
-
-/* Carrinho bem centralizado */
-.carrinho-topo {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 32px;
-  width: 32px;
-  cursor: pointer;
-}
-
-.carrinho-topo img.icon-carrinho {
-  width: 32px;
-  height: 32px;
-  filter: invert(100%);
-}
-
-/* Bolinha de contador posicionada perfeitamente */
-.carrinho-topo span#contador-carrinho {
-  position: absolute;
-  top: -6px;
-  right: -8px;
-  background-color: #ff3b3b;
-  color: white;
-  font-size: 0.75rem;
-  font-weight: bold;
-  padding: 2px 6px;
-  border-radius: 50%;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-  min-width: 18px;
-  text-align: center;
-}
-
-#menu1,
-#menu2,
-#menu3,
-#menu4 {
-  color: black;
-}
-
-/* Media Queries para Responsividade */
-
-/* Para telas menores que 768px (tablets) */
-@media (max-width: 768px) {
-  header nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .card {
-    width: 45%; /* Dois cards por linha */
-  }
-
-  .contato {
-    width: 90%;
-    margin: 20px auto;
-  }
-}
-
-/* Para telas menores que 480px (smartphones) */
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 2rem;
-  }
-
-  .produtos h2 {
-    font-size: 1.8rem;
-  }
-
-  .card {
-    width: 90%; /* Um card por linha */
-    margin: 15px auto;
-  }
-
-  .painel-carrinho {
-    width: 100%;
-    right: -100%;
-  }
-
-  .painel-carrinho.aberto {
-    right: 0;
-  }
-}
-
-/* --- Melhorias na Página de Contato --- */
-
+/* =================================
+    PÁGINA DE CONTATO
+   ================================= */
 .form-contato {
-  /* Adiciona um espaço maior entre o botão "Enviar" e a seção de informações */
   margin-bottom: 30px;
 }
 
 .info-contato {
-  padding-top: 20px; /* Cria um respiro acima do título "Informações de Contato" */
-  border-top: 1px solid #e0d2c0; /* Adiciona uma linha sutil de separação */
-  text-align: left; /* Garante o alinhamento de todo o bloco à esquerda */
-}
-
-.info-contato h3 {
-  margin-bottom: 15px; /* Adiciona um espaço abaixo do título */
-}
-
-.info-contato p {
-  margin-bottom: 10px; /* Adiciona um espaçamento entre as linhas (WhatsApp, Email, etc) */
+  padding-top: 20px;
+  border-top: 1px solid rgb(224, 210, 192); /* Linha sutil para separar o formulário das informações de contato. */
+  text-align: left;
 }
 
 .info-contato a {
-  color: #d2691e; /* Deixa o link com a cor principal do site */
-  text-decoration: none; /* Remove o sublinhado padrão */
+  color: rgb(210, 105, 30);
+  text-decoration: none;
   font-weight: bold;
 }
 
 .info-contato a:hover {
-  text-decoration: underline; /* Adiciona o sublinhado apenas ao passar o mouse */
+  text-decoration: underline;
 }
 
-/* --- Estilos do Menu Hamburguer --- */
-
+/* =================================
+    MENU HAMBURGUER (MOBILE)
+   ================================= */
 .hamburger {
-  display: none; /* Escondido por padrão em telas grandes */
+  display: none; /* Escondido em telas grandes por padrão. */
   border: none;
   background: none;
   cursor: pointer;
@@ -472,113 +256,91 @@ header nav a img.icon {
   width: 25px;
   height: 3px;
   margin: 5px auto;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   transition: all 0.3s ease-in-out;
 }
 
-/* --- Lógica Responsiva do Menu --- */
+/* =================================
+    RESPONSIVIDADE (MEDIA QUERIES)
+   ================================= */
+
+/* Para tablets e telas menores. */
 @media (max-width: 768px) {
-  /* 1. Esconde a navegação principal */
+  /* 1. Esconde a navegação padrão e mostra o botão hamburguer. */
   #nav-menu {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 75px; /* Altura do cabeçalho */
+    top: 75px; 
     left: 0;
     width: 100%;
-    background-color: #d2691e; /* Mesma cor do header */
-    padding: 10px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgb(210, 105, 30);
   }
 
-  /* 2. Classe que o JS vai adicionar para MOSTRAR o menu */
+  /* 2. Classe 'nav-aberta' que o JS adiciona para mostrar o menu. */
   #nav-menu.nav-aberta {
     display: flex;
   }
 
-  /* 3. Mostra o botão hamburguer */
+  /* 3. Mostra o botão hamburguer e o posiciona no início. */
   .hamburger {
     display: block;
-    order: -1; /* Coloca o hamburguer antes do título */
+    order: -1; 
   }
 
-  /* 4. Ajusta o container do header para o novo layout */
-  .container-header {
-    justify-content: space-between; /* Garante espaço entre os itens */
-  }
-
-  /* 5. Centraliza o título no espaço que sobra */
+  /* 4. Ajusta o layout do cabeçalho para o hamburguer. */
   .container-header h1 {
     flex-grow: 1;
     text-align: center;
-    font-size: 1.8rem;
     margin: 0 15px;
+  }
+
+  /* Ajusta os cards para 2 por linha. */
+  .card {
+    width: 45%; 
   }
 }
 
-/* --- Estilos do Rodapé com Ícones Sociais --- */
+/* Para smartphones. */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2rem;
+  }
 
-footer {
-  /* Garante que o texto e os ícones fiquem alinhados */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px; /* Espaçamento entre a área dos ícones e o texto de copyright */
+  /* Ajusta os cards para 1 por linha, ocupando quase toda a largura. */
+  .card {
+    width: 90%; 
+    margin: 15px auto;
+  }
+
+  /* Faz o painel do carrinho ocupar toda a tela. */
+  .painel-carrinho {
+    width: 100%;
+    right: -100%;
+  }
 }
 
-.social-icons a {
-  color: #6b4226; /* Cor dos ícones, combinando com o site */
-  font-size: 1.8rem; /* Tamanho dos ícones */
-  margin: 0 15px; /* Espaçamento entre os ícones */
-  text-decoration: none;
-  transition: color 0.3s ease, transform 0.3s ease; /* Animação suave */
-}
-
-.social-icons a:hover {
-  color: #d2691e; /* Muda para a cor principal ao passar o mouse */
-  transform: scale(1.2); /* Efeito de zoom sutil */
-}
-
-/* --- Estilos da Página Sobre o Projeto --- */
-
+/* =================================
+    PÁGINA SOBRE O PROJETO
+   ================================= */
 .container-sobre {
   max-width: 900px;
   margin: 40px auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   border-radius: 10px;
   box-shadow: 0 0 12px rgba(0,0,0,0.1);
-  color: #4d3b29;
 }
 
-.sobre-projeto h2 {
+.sobre-projeto h2, .sobre-projeto h3 {
   font-family: 'Pacifico', cursive;
   text-align: center;
-  font-size: 2.5rem;
-  color: #8b4513;
   margin-bottom: 30px;
-}
-
-.sobre-projeto h3 {
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: #6b4226;
-  margin-top: 30px;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #f0e5d8;
-  padding-bottom: 5px;
 }
 
 .sobre-projeto p, .sobre-projeto li {
   font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 15px;
-}
-
-.sobre-projeto ul {
-  list-style-position: inside;
-  padding-left: 10px;
+  line-height: 1.7; /* Melhora a legibilidade de textos longos. */
 }
 
 .mockup-img {
@@ -588,7 +350,32 @@ footer {
   box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
-/* --- Estilos para o Selo de Validação W3C --- */
+/* =================================
+    FOOTER E ÍCONES SOCIAIS
+   ================================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(240, 229, 216);
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: rgb(107, 66, 38);
+  font-size: 1.8rem;
+  margin: 0 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: rgb(210, 105, 30);
+  transform: scale(1.2); /* Efeito de crescimento sutil ao passar o mouse. */
+}
+
 .w3c-seal img {
   border: 0;
   width: 88px;

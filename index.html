@@ -1,18 +1,19 @@
-<!--
-/*
-  Projeto: Sra. Cookies - Loja Virtual
-  Participante(s): [Luigy e Isabela]
-  Data: [01/10/2025]
-  
-  Página index.html
-*/
+<!-- 
+  Autor: [LUIGY/ISABELA]
+  Data de Criação: 01/10/2025
+  Versão: 1.0
+  Descrição: Estrutura HTML para a página principal da "Sra. Cookies", 
+             exibindo produtos e funcionalidades de carrinho de compras.
 -->
-
 <!DOCTYPE html>
+<!-- Define o documento como HTML5 e especifica o idioma principal como português do Brasil para acessibilidade e SEO. -->
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 para suportar caracteres especiais. -->
+    <!-- Configurações essenciais do documento (metadados). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Garante a responsividade do layout em diferentes dispositivos. -->
+    
+    <!-- Metadados para otimização de mecanismos de busca (SEO). -->
     <meta
       name="description"
       content="Descubra os melhores cookies artesanais na Sra. Cookies. Sabores incríveis como Chocolate, Gianduia, Kinder e muito mais. Faça seu pedido online!"
@@ -21,14 +22,27 @@
       name="keywords"
       content="cookies, cookies artesanais, loja de cookies, comprar cookies online, Sra. Cookies"
     >
+    
+    <!-- Título da página, exibido na aba do navegador. -->
     <title>Loja de Cookies</title>
+
+    <!-- Favicon da página, utilizando um SVG embutido para performance e escalabilidade. -->
     <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20100%20100%27%3E%3Ctext%20y%3D%27.9em%27%20font-size%3D%2790%27%3E%F0%9F%8D%AA%3C/text%3E%3C/svg%3E">
+    
+    <!-- Folha de estilos principal da aplicação. -->
     <link rel="stylesheet" href="estilo.css">
+
+    <!-- Script principal. NOTA: A inclusão no <head> pode ser bloqueante. Considere mover para o final de <body> com o atributo 'defer' para otimizar o carregamento da página. -->
     <script src="script.js"></script>
+    
+    <!-- Importação de dependências externas (CDNs). -->
+    <!-- Font Awesome para ícones. -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
+    <!-- Google Fonts para tipografia customizada. -->
+    <!-- As tags 'preconnect' estabelecem uma conexão antecipada com o servidor de fontes, otimizando o tempo de carregamento. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -37,21 +51,27 @@
     >
   </head>
   <body>
+    <!-- Cabeçalho principal da página, contendo navegação e identidade visual. -->
     <header>
+      <!-- Contêiner para alinhar e organizar os elementos do cabeçalho. -->
       <div class="container-header">
+        
+        <!-- Botão 'hamburger' para navegação em dispositivos móveis. A interatividade é controlada via JavaScript. -->
         <button
           type="button"
           class="hamburger"
           id="hamburger-btn"
-          aria-label="Abrir menu de navegação"
+          aria-label="Abrir menu de navegação" <!-- 'aria-label' crucial para acessibilidade de leitores de tela. -->
         >
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
         </button>
 
+        <!-- Título principal da página, elemento de maior importância hierárquica (H1). -->
         <h1>🍪 Sra. Cookies 🍪</h1>
 
+        <!-- Navegação principal do site. -->
         <nav id="nav-menu">
           <a href="index.html" id="menu1">Cookies</a>
           <a href="bebidas.html" id="menu2">Bebidas</a>
@@ -59,105 +79,80 @@
           <a href="sobre.html" id="menu4">Sobre</a>
         </nav>
 
+        <!-- Elemento interativo para exibir o carrinho de compras. -->
         <div class="carrinho-topo" id="abrirCarrinho">
           🛒
+          <!-- O 'span' é o contador de itens, que será atualizado dinamicamente via JavaScript. -->
           <span id="contador-carrinho">0</span>
         </div>
       </div>
     </header>
+
+    <!-- Conteúdo principal da página. -->
     <main>
-    <section class="produtos">
-      <h2>Nossos Cookies</h2>
+      <!-- Seção dedicada à listagem de produtos. -->
+      <section class="produtos">
+        <!-- Título da seção, hierarquicamente inferior ao H1. -->
+        <h2>Nossos Cookies</h2>
 
-      <div class="card">
-        <img
-          src="https://framerusercontent.com/images/0kcCVbUBv7i3f7ChvpYYnmpeyw.webp?scale-down-to=1024&width=1694&height=1709"
-          alt="Cookie de Chocolate"
-        >
-        <h3>Cookie de Chocolate</h3>
-        <p>Cookie com MUUUITAS gotas de chocolate.</p>
-        <span>R$ 15,90</span>
-        <button>Comprar</button>
-      </div>
+        <!-- Início da estrutura de 'cards' de produto. Este padrão é repetido para cada item. -->
+        <!-- Card 1: Cookie de Chocolate -->
+        <div class="card">
+          <img
+            src="https://framerusercontent.com/images/0kcCVbUBv7i3f7ChvpYYnmpeyw.webp?scale-down-to=1024&width=1694&height=1709"
+            alt="Cookie de Chocolate" <!-- 'alt' essencial para acessibilidade e SEO. -->
+          >
+          <h3>Cookie de Chocolate</h3>
+          <p>Cookie com MUUUITAS gotas de chocolate.</p>
+          <span>R$ 15,90</span>
+          <button>Comprar</button>
+        </div>
 
-      <div class="card">
-        <img
-          src="https://framerusercontent.com/images/6R9cbnXEpConkLZ8vS6os7v2cA.webp?scale-down-to=1024&width=1694&height=1709"
-          alt="Cookie de Gianduia"
-        >
-        <h3>Cookie de Gianduia</h3>
-        <p>Cookie recheado de MUUUUUUITA avelã Italiana</p>
-        <span>R$ 19,90</span>
-        <button>Comprar</button>
-      </div>
+        <!-- Card 2: Cookie de Gianduia -->
+        <div class="card">
+          <img
+            src="https://framerusercontent.com/images/6R9cbnXEpConkLZ8vS6os7v2cA.webp?scale-down-to=1024&width=1694&height=1709"
+            alt="Cookie de Gianduia"
+          >
+          <h3>Cookie de Gianduia</h3>
+          <p>Cookie recheado de MUUUUUUITA avelã Italiana</p>
+          <span>R$ 19,90</span>
+          <button type="button">Comprar</button> <!-- 'type="button"' previne o comportamento padrão de submissão de formulário. -->
+        </div>
 
-      <div class="card">
-        <img
-          src="https://framerusercontent.com/images/I6pkbYl9qCSvy0FXFrZoGkK0yeY.png?width=425&height=391"
-          alt="Cookie Alpino Black"
-        >
-        <h3>Cookie Alpino Black</h3>
-        <p>Uma explosão de sabor 3 tipos de chocolate.</p>
-        <span>R$ 15,90</span>
-        <button>Comprar</button>
-      </div>
-
-      <div class="card">
-        <img
-          src="https://framerusercontent.com/images/qq8gQGdKRVCgUyATQeNkUjtvIww.png?scale-down-to=1024&width=1330&height=1000"
-          alt="Cookie de KitKat"
-        >
-        <h3>Cookie de KitKat</h3>
-        <p>Cooike recheado com MUUUUITO KitKat</p>
-        <span>R$ 15,90</span>
-        <button>Comprar</button>
-      </div>
-
-      <div class="card">
-        <img
-          src="https://framerusercontent.com/images/TGaYIYbt629PcGNNGgvQ6dUGZ0M.webp?width=244&height=163"
-          alt="Cookie de Kinder Bueno"
-        >
-        <h3>Cookie de Kinder</h3>
-        <p>Cookie com MUUUITO recheio de Kinder</p>
-        <span>R$ 22,90</span>
-        <button>Comprar</button>
-      </div>
-
-      <div class="card">
-        <img
-          src="https://framerusercontent.com/images/ho7Bi0VGf8gm2d48aSZBZjwfdoI.png?scale-down-to=512&width=1080&height=1080"
-          alt="Cookie de New York Nuts"
-        >
-        <h3>Cookie de New York</h3>
-        <p>Cookie com MUUITO recheio de chocolate</p>
-        <span>R$ 19,90</span>
-        <button>Comprar</button>
-      </div>
-
-      <div class="painel-carrinho">
-        <h2>Seu Carrinho</h2>
-        <ul id="lista-carrinho"></ul>
-        <p id="total">Total: R$ 0,00</p>
-        <button type="submit" id="finalizar">Finalizar Pedido</button>
-      </div>
-    </section>
+        <!-- Outros cards seguem a mesma estrutura... -->
+        <!-- Painel do carrinho de compras. Provavelmente, sua visibilidade é controlada via CSS e JavaScript. -->
+        <div class="painel-carrinho">
+          <h2>Seu Carrinho</h2>
+          <!-- Lista não ordenada que será populada dinamicamente com os itens do carrinho. -->
+          <ul id="lista-carrinho"></ul>
+          <!-- Parágrafo para exibir o valor total da compra, atualizado via JS. -->
+          <p id="total">Total: R$ 0,00</p>
+          <!-- Botão para finalizar o processo de compra. -->
+          <button type="submit" id="finalizar">Finalizar Pedido</button>
+        </div>
+      </section>
     </main>
 
+    <!-- Rodapé da página, contendo informações secundárias e links. -->
     <footer>
-  <div class="social-icons">
-    <a href="#" aria-label="Link para o Instagram"><i class="fab fa-instagram"></i></a>
-    <a href="#" aria-label="Link para o Facebook"><i class="fab fa-facebook-f"></i></a>
-    <a href="#" aria-label="Link para o WhatsApp"><i class="fab fa-whatsapp"></i></a>
-  </div>
+      <!-- Seção para ícones de redes sociais. -->
+      <div class="social-icons">
+        <a href="#" aria-label="Link para o Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Link para o Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Link para o WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
 
-  <div class="w3c-seal">
-    <a href="https://jigsaw.w3.org/css-validator/check/referer">
-      <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="CSS válido!">
-    </a>
-  </div>
+      <!-- Selo de validação de CSS do W3C. Demonstra conformidade com os padrões web. -->
+      <div class="w3c-seal">
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+          <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="CSS válido!">
+        </a>
+      </div>
 
-  <p>&copy; 2025 Cookie Store. Todos os direitos reservados.</p>
-</footer>
+      <!-- Informação de direitos autorais. -->
+      <p>&copy; 2025 Cookie Store. Todos os direitos reservados.</p>
+    </footer>
+    
   </body>
 </html>
