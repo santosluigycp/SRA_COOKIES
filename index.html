@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja de Cookies</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+  <header>
+  <div class="container-header">
+    <h1>🍪 Sra. Cookies</h1>
+
+    <nav>
+      <a href="index.html" id="menu1" >Cookies</a>
+      <a href="bebidas.html" id="menu2" >bebidas</a>
+      <a href="contato.html" id="menu3" >Contato</a>
+
+      <!-- Carrinho -->
+      <div class="carrinho-topo" id="abrirCarrinho">
+        <!--<img src="icone-carrinho.png" alt="Carrinho" class="icon-carrinho"> !-->
+        🛒
+        <span id="contador-carrinho">0</span>
+      </div>
+    </nav>
+  </div>
+</header>
+
+  <section class="produtos">
+    <h2>Nossos Cookies</h2>
+
+    <div class="card">
+      <img src="https://framerusercontent.com/images/0kcCVbUBv7i3f7ChvpYYnmpeyw.webp?scale-down-to=1024&width=1694&height=1709" alt="Cookie de Chocolate">
+      <h3>Cookie de Chocolate</h3>
+      <p>Cookie com MUUUITAS gotas de chocolate.</p>
+      <span>R$ 15,90</span>
+      <button>Comprar</button>
+    </div>
+
+    <div class="card">
+      <img src="https://framerusercontent.com/images/6R9cbnXEpConkLZ8vS6os7v2cA.webp?scale-down-to=1024&width=1694&height=1709" alt="Cookie de Gianduia">
+      <h3>Cookie de Gianduia</h3>
+      <p>Cookie recheado de MUUUUUUITA avelã Italiana</p>
+      <span>R$ 19,90</span>
+      <button>Comprar</button>
+    </div>
+
+    <div class="card">
+      <img src="https://framerusercontent.com/images/I6pkbYl9qCSvy0FXFrZoGkK0yeY.png?width=425&height=391" alt="Cookie Alpino Black">
+      <h3>Cookie Alpino Black </h3>
+      <p>Uma explosão de sabor 3 tipos de chocolate.</p>
+      <span>R$ 15,90</span>
+      <button>Comprar</button>
+    </div>
+
+    <div class="card">
+        <img src="https://framerusercontent.com/images/qq8gQGdKRVCgUyATQeNkUjtvIww.png?scale-down-to=1024&width=1330&height=1000" alt="Cookie de KitKat">
+        <h3>Cookie de KitKat</h3>
+        <p>Cooike recheado com MUUUUITO KitKat</p>
+        <span>R$ 15,90</span>
+        <button>Comprar</button>
+    </div>
+
+    <div class="card">
+        <img src="https://framerusercontent.com/images/TGaYIYbt629PcGNNGgvQ6dUGZ0M.webp?width=244&height=163" alt="Cookie de Kinder Bueno">
+        <h3>Cookie de Kinder</h3>
+        <p>Cookie com MUUUITO recheio de Kinder</p>
+        <span>R$ 22,90</span>
+        <button>Comprar</button>
+    </div>
+
+    <div class="card">
+        <img src="https://framerusercontent.com/images/ho7Bi0VGf8gm2d48aSZBZjwfdoI.png?scale-down-to=512&width=1080&height=1080" alt="Cookie de New York Nuts">
+        <h3>Cookie de New York</h3>
+        <p>Cookie com MUUITO recheio de chocolate</p>
+        <span>R$ 19,90</span>
+        <button>Comprar</button>
+    </div>
+
+    <div class="painel-carrinho">
+  <h2>Seu Carrinho</h2>
+  <ul id="lista-carrinho"></ul>
+  <p id="total">Total: R$ 0,00</p>
+  <button id="finalizar">Finalizar Pedido</button>
+</div>
+
+<script src="script.js"></script>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Cookie Store. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>

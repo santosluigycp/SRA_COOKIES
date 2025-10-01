@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja de Cookies</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+  <header>
+  <div class="container-header">
+    <h1>🍪 Sra. Cookies</h1>
+
+    <nav>
+      <a href="index.html" style="color:black;">Cookies</a>
+      <a href="bebidas.html" style="color:black;">bebidas</a>
+      <a href="contato.html" style="color:black;">Contato</a>
+      
+      <!-- Carrinho -->
+      <div class="carrinho-topo" id="abrirCarrinho">
+        <!--<img src="icone-carrinho.png" alt="Carrinho" class="icon-carrinho"> !-->
+        🛒
+        <span id="contador-carrinho">0</span>
+      </div>
+    </nav>
+  </div>
+</header>
+
+  <section class="produtos">
+    <h2>Nossas bebidas</h2>
+
+    <div class="card">
+      <img src="https://framerusercontent.com/images/jVkMSnCNpxbIbtrmduAjFsh9q8.png?scale-down-to=1024&width=1536&height=2048" alt="Cappuccino">
+      <h3>Cappuccino</h3>
+      <p>Sorvete de baunilha, leite gelado, caramelo, cappuccio e chantily.</p>
+      <span>R$ 15,90</span>
+      <button>Comprar</button>
+    </div>
+
+    <div class="card">
+      <img src="https://framerusercontent.com/images/jzjV8aXMUFqwEeXtO12UObFlBA.png?scale-down-to=1024&width=1536&height=2048" alt="Cappuccino">
+      <h3>Fluffy</h3>
+      <p> Iogurte de morango, Leite, sorvete de baunilha, nesquik, cream cheese e chantilly</p>
+      <span>R$ 19,90</span>
+      <button>Comprar</button>
+    </div>
+
+    <div class="card">
+      <img src="https://framerusercontent.com/images/YI3nEOdMc8dQyk5PRd1b9ACVXDk.png?scale-down-to=1024&width=1536&height=2048" alt="Ice pistache">
+      <h3>Ice pistache </h3>
+      <p>Leite gelado, creme de pistache, sorvete de baunilha e chantilly</p>
+      <span>R$ 15,90</span>
+      <button>Comprar</button>
+    </div>
+
+    <div class="painel-carrinho">
+  <h2>Seu Carrinho</h2>
+  <ul id="lista-carrinho"></ul>
+  <p id="total">Total: R$ 0,00</p>
+  <button id="finalizar">Finalizar Pedido</button>
+</div>
+
+<script src="script.js"></script>
+    
+
+  </section>

@@ -1,0 +1,357 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fff8f2;
+  color: #4d3b29;
+  min-height: 100vh;
+}
+
+/* Cabeçalho com container flex */
+header {
+  background-color: #d2691e;
+  color: white;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.container-header {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Título */
+header h1 {
+  font-size: 2.5rem;
+}
+
+/* Navegação centralizada */
+header nav {
+  flex-grow: 1;
+  text-align: center;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #f0e5d8;
+}
+
+/* Ícone do carrinho no topo direito */
+.carrinho-topo {
+  cursor: pointer;
+  background-color: #fff;
+  color: #d2691e;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-weight: bold;
+  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+  user-select: none;
+}
+
+.carrinho-topo:hover {
+  background-color: #f5f5f5;
+}
+
+.carrinho-topo span {
+  background-color: #d2691e;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 50%;
+  margin-left: 8px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* Área dos produtos */
+.produtos {
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.produtos h2 {
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  font-family: 'Georgia', serif;
+  color: #8b4513;
+}
+
+/* Cards dos produtos */
+.card {
+  background-color: #fff;
+  border: 1px solid #e0d2c0;
+  border-radius: 10px;
+  display: inline-block;
+  width: 250px;
+  margin: 20px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  vertical-align: top;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s ease; /* Suaviza o efeito */
+}
+
+.card img:hover {
+  transform: scale(1.5); /* Aumenta a imagem em 5% */
+}
+
+
+.card h3 {
+  margin: 10px 0;
+  font-size: 1.3rem;
+  color: #6b4226;
+}
+
+.card p {
+  font-size: 0.95rem;
+  margin: 10px 0 15px;
+  min-height: 50px;
+}
+
+.card span {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #d2691e;
+}
+
+.card button {
+  background-color: #d2691e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.card button:hover {
+  background-color: #a0522d;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0e5d8;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #6b4226;
+}
+
+/* --- Estilo do painel lateral do carrinho --- */
+.painel-carrinho {
+  position: fixed;
+  top: 0;
+  right: -320px; /* escondido inicialmente */
+  width: 320px;
+  height: 100vh;
+  background-color: #fff8f2;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.15);
+  padding: 20px;
+  box-sizing: border-box;
+  transition: right 0.3s ease;
+  overflow-y: auto;
+  z-index: 1000;
+  font-family: 'Arial', sans-serif;
+  color: #4d3b29;
+  display: flex;
+  flex-direction: column;
+}
+
+.painel-carrinho.aberto {
+  right: 0;
+}
+
+.painel-carrinho h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #d2691e;
+  padding-bottom: 10px;
+}
+
+#lista-carrinho {
+  list-style: none;
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+#lista-carrinho li {
+  padding: 8px 0;
+  border-bottom: 1px solid #e0d2c0;
+  font-size: 1rem;
+}
+
+#total {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #d2691e;
+}
+
+#finalizar {
+  background-color: #d2691e;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#finalizar:hover {
+  background-color: #a0522d;
+}
+
+/* Formatação do formulário de contato */
+.contato {
+  max-width: 500px;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  color: #4d3b29;
+  font-family: 'Arial', sans-serif;
+}
+
+.contato h2 {
+  text-align: center;
+  font-family: 'Georgia', serif;
+  margin-bottom: 25px;
+  color: #8b4513;
+}
+
+.contato label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.contato input[type="text"],
+.contato input[type="email"],
+.contato textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d2691e;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  font-family: 'Arial', sans-serif;
+  color: #4d3b29;
+  resize: vertical;
+}
+
+.contato button {
+  background-color: #d2691e;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contato button:hover {
+  background-color: #a0522d;
+}
+/* Container flex do cabeçalho */
+.container-header {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Nav com ícones */
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Ícones padrão */
+header nav a img.icon {
+  width: 30px;
+  height: 30px;
+  filter: invert(100%);
+  cursor: pointer;
+}
+
+/* Carrinho bem centralizado */
+.carrinho-topo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+}
+
+.carrinho-topo img.icon-carrinho {
+  width: 32px;
+  height: 32px;
+  filter: invert(100%);
+}
+
+/* Bolinha de contador posicionada perfeitamente */
+.carrinho-topo span#contador-carrinho {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background-color: #ff3b3b;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  box-shadow: 0 0 3px rgba(0,0,0,0.3);
+  min-width: 18px;
+  text-align: center;
+}
+
+#menu1, #menu2, #menu3  {
+  color:black
+}
