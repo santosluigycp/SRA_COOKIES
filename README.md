@@ -1,6 +1,6 @@
 # 🍪 Sra. Cookies - Loja Virtual
 
-Este é o projeto de front-end para a "Sra. Cookies", uma loja virtual simples para a venda de cookies e bebidas. O site foi desenvolvido com foco em uma interface limpa, responsiva e com funcionalidades de e-commerce essenciais.
+Este é o projeto de front-end para a "Sra. Cookies Artesanais", uma loja virtual simples para a venda de cookies e bebidas. O site foi desenvolvido com foco em uma interface limpa, responsiva e com funcionalidades de e-commerce essenciais.
 
 ## :camera: Preview do Projeto
 
