@@ -1,3 +1,13 @@
+/*
+ * Projeto: Sra. Cookies - Loja Virtual
+ * Participante(s): [Luigy e Isabela]
+ * Data: [Data de Criação/Modificação]
+ * * Script principal para controle de interatividade, incluindo:
+ * - Menu hamburguer
+ * - Lógica do carrinho de compras
+ * - Persistência de dados com LocalStorage
+ */
+
 document.addEventListener("DOMContentLoaded", () => {
   // --- SELETORES DE ELEMENTOS ---
   const abrirCarrinhoBtn = document.getElementById("abrirCarrinho");

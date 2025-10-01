@@ -1,3 +1,11 @@
+/*
+  Projeto: Sra. Cookies - Loja Virtual
+  Participante(s): [Luigy e Isabela]
+  Data: [01/10/2025]
+  
+  Arquivo de estilização principal do site.
+*/
+
 /* Reset básico */
 * {
   margin: 0;
@@ -5,7 +13,9 @@
   box-sizing: border-box;
 }
 
-/* Corpo da página */
+/* =================================
+   ESTILOS GERAIS (BODY, RESET)
+   ================================= */
 body {
   font-family: "Lato", sans-serif;
   background-color: #fff8f2;
@@ -13,7 +23,9 @@ body {
   min-height: 100vh;
 }
 
-/* Cabeçalho com container flex */
+/* =================================
+   CABEÇALHO E NAVEGAÇÃO
+   ================================= */
 header {
   background-color: #d2691e;
   color: white;
@@ -56,7 +68,9 @@ header nav a:hover {
   color: #f0e5d8;
 }
 
-/* Ícone do carrinho no topo direito */
+/* =================================
+   ÍCONE DO CARINHO
+   ================================= */
 .carrinho-topo {
   cursor: pointer;
   background-color: #fff;
@@ -91,7 +105,9 @@ header nav a:hover {
   text-align: center;
 }
 
-/* Área dos produtos */
+/* =================================
+   ÁREA DOS PRODUTOS
+   ================================= */
 .produtos {
   padding: 40px 20px;
   text-align: center;
@@ -167,7 +183,9 @@ header nav a:hover {
   background-color: #a0522d;
 }
 
-/* Footer */
+/* =================================
+   FOOTER
+   ================================= */
 footer {
   text-align: center;
   padding: 20px;
