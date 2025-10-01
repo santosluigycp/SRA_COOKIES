@@ -359,7 +359,8 @@ header nav a img.icon {
 
 #menu1,
 #menu2,
-#menu3 {
+#menu3,
+#menu4 {
   color: black;
 }
 
@@ -518,4 +519,60 @@ footer {
 .social-icons a:hover {
   color: #d2691e; /* Muda para a cor principal ao passar o mouse */
   transform: scale(1.2); /* Efeito de zoom sutil */
+}
+
+/* --- Estilos da Página Sobre o Projeto --- */
+
+.container-sobre {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  color: #4d3b29;
+}
+
+.sobre-projeto h2 {
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #8b4513;
+  margin-bottom: 30px;
+}
+
+.sobre-projeto h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #6b4226;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #f0e5d8;
+  padding-bottom: 5px;
+}
+
+.sobre-projeto p, .sobre-projeto li {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.sobre-projeto ul {
+  list-style-position: inside;
+  padding-left: 10px;
+}
+
+.mockup-img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* --- Estilos para o Selo de Validação W3C --- */
+.w3c-seal img {
+  border: 0;
+  width: 88px;
+  height: 31px;
 }
